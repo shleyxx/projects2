@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects</title>
+  <style>
+    /* Background and layout */
+    body {
+      background: linear-gradient(to right, #2688ca, #8a753c);
+      font-family: Arial, sans-serif;
+      color: #948f8f;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Main container */
+    .container {
+      background: rgb(241, 241, 241);
+      width: 100%;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+
+    .project {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #d6d4d4;
+      padding-bottom: 20px;
+    }
+
+    .toggle-btn {
+      background: #d5d7da;
+      color: #312e2e;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .toggle-btn:hover {
+      background: #0056b3;
+    }
+
+    .project-detail {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .project-detail img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    a.back {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Projects</h1>
+
+    <div class="project">
+      <h2>The identifier</h2>
+      <p>This system ask series of questions to identifiy what type of animal is it , defends on the questions</p>.</p>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Click to Show/Hide Project</button>
+      <div class="project-detail">
+          <img src="images/project1.jpeg" alt="Project 1 Screenshot">
+        <p>More detailed info about the project—your challenge, approach, technologies used, etc.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>register system</h2>
+      <p>This system is a register and login and the user must register his account for further login her created account</p>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Click to Show/Hide Project</button>
+      <div class="project-detail">
+        <img src="images/project2.jpeg" alt="Project 2 Screenshot">
+        <p>More detailed info about this project—what it does, your role, key features.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+  </div>
+
+  <script>
+    function toggleDetail(btn) {
+      const detail = btn.nextElementSibling;
+      const isVisible = detail.style.display === 'block';
+      detail.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Show Project' : 'Hide Project';
+    }
+  </script>
+
+</body>
+</html>
